@@ -9,8 +9,8 @@ import java.net.http.HttpResponse;
 import java.util.concurrent.CompletableFuture;
 
 public class ApiEntryPoint {
-    private ApiClient apiClient;
-    private HttpClient httpClient;
+    private final ApiClient apiClient;
+    private final HttpClient httpClient;
 
     public ApiEntryPoint(ApiClient apiClient) {
         this.apiClient = apiClient;

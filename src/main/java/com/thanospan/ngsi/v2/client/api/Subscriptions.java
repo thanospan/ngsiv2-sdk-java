@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
 public class Subscriptions {
-    private ApiClient apiClient;
-    private HttpClient httpClient;
+    private final ApiClient apiClient;
+    private final HttpClient httpClient;
 
     public Subscriptions(ApiClient apiClient) {
         this.apiClient = apiClient;

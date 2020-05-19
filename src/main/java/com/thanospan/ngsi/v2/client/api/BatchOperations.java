@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
 public class BatchOperations {
-    private ApiClient apiClient;
-    private HttpClient httpClient;
+    private final ApiClient apiClient;
+    private final HttpClient httpClient;
 
     public BatchOperations(ApiClient apiClient) {
         this.apiClient = apiClient;

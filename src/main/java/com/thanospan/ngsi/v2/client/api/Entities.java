@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
 public class Entities {
-    private ApiClient apiClient;
-    private HttpClient httpClient;
+    private final ApiClient apiClient;
+    private final HttpClient httpClient;
 
     public Entities(ApiClient apiClient) {
         this.apiClient = apiClient;

@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
 public class AttributeValue {
-    private ApiClient apiClient;
-    private HttpClient httpClient;
+    private final ApiClient apiClient;
+    private final HttpClient httpClient;
 
     public AttributeValue(ApiClient apiClient) {
         this.apiClient = apiClient;
