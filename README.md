@@ -41,4 +41,4 @@ Types | retrieveEntityType | **GET** /types/{entityType}
 According to the [NGSIv2 Implementation Notes](https://github.com/telefonicaid/fiware-orion/blob/master/doc/manuals/user/ngsiv2_implementation_notes.md#registrations):<br/>
 `PATCH /v2/registration/<id>` is not implemented. Thus, registrations cannot be updated directly. I.e., updates must be done deleting and re-creating the registration. Please see [this issue](https://github.com/telefonicaid/fiware-orion/issues/3007) about this.
 * **204 No Content** responses cause `java.io.IOException: unexpected content length header with 204 response`<br/>
-This [bug](https://bugs.openjdk.java.net/browse/JDK-8218662) has been fixed in jdk-11.0.7
+[This bug](https://bugs.openjdk.java.net/browse/JDK-8218662) has been fixed in jdk-11.0.7
