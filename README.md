@@ -42,3 +42,7 @@ According to the [NGSIv2 Implementation Notes](https://github.com/telefonicaid/f
 `PATCH /v2/registration/<id>` is not implemented. Thus, registrations cannot be updated directly. I.e., updates must be done deleting and re-creating the registration. Please see [this issue](https://github.com/telefonicaid/fiware-orion/issues/3007) about this.
 * **204 No Content** responses cause `java.io.IOException: unexpected content length header with 204 response`<br/>
 [This bug](https://bugs.openjdk.java.net/browse/JDK-8218662) has been fixed in jdk-11.0.7
+
+## Additional Resources
+* An introductory tutorial to the FIWARE Platform can be found [here](https://github.com/FIWARE/tutorials.Getting-Started).
+* The official docker image of the Orion Context Broker can be found [here](https://hub.docker.com/r/fiware/orion).
