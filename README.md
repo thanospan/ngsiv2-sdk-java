@@ -1,4 +1,4 @@
-# Java Client SDK for [NGSI v2](https://fiware.github.io/specifications/ngsiv2/stable/)
+# [NGSI v2](https://fiware.github.io/specifications/ngsiv2/stable/) SDK for Java
 
 ## Documentation for API Endpoints
 
