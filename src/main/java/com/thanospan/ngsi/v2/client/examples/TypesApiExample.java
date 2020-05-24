@@ -6,7 +6,7 @@ import com.thanospan.ngsi.v2.client.api.TypesApi;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 
-public class TypesExample {
+public class TypesApiExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
         TypesApi typesApi = new TypesApi(apiClient);

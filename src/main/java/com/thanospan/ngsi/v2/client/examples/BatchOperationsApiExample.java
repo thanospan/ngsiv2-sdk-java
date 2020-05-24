@@ -6,7 +6,7 @@ import com.thanospan.ngsi.v2.client.api.BatchOperationsApi;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 
-public class BatchOperationsExample {
+public class BatchOperationsApiExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
         BatchOperationsApi batchOperationsApi = new BatchOperationsApi(apiClient);

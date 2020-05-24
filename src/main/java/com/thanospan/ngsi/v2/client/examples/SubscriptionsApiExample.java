@@ -6,7 +6,7 @@ import com.thanospan.ngsi.v2.client.api.SubscriptionsApi;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 
-public class SubscriptionsExample {
+public class SubscriptionsApiExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
         SubscriptionsApi subscriptionsApi = new SubscriptionsApi(apiClient);

@@ -6,7 +6,7 @@ import com.thanospan.ngsi.v2.client.api.EntitiesApi;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 
-public class EntitiesExample {
+public class EntitiesApiExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
         EntitiesApi entitiesApi = new EntitiesApi(apiClient);

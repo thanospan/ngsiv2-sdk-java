@@ -6,7 +6,7 @@ import com.thanospan.ngsi.v2.client.api.AttributeValueApi;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 
-public class AttributeValueExample {
+public class AttributeValueApiExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
         AttributeValueApi attributeValueApi = new AttributeValueApi(apiClient);

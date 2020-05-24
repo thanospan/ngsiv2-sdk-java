@@ -5,7 +5,7 @@ import com.thanospan.ngsi.v2.client.api.ApiEntryPointApi;
 
 import java.net.http.HttpResponse;
 
-public class ApiEntryPointExample {
+public class ApiEntryPointApiExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
         ApiEntryPointApi apiEntryPointApi = new ApiEntryPointApi(apiClient);

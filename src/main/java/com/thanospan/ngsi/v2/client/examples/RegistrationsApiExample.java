@@ -6,7 +6,7 @@ import com.thanospan.ngsi.v2.client.api.RegistrationsApi;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 
-public class RegistrationsExample {
+public class RegistrationsApiExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
         RegistrationsApi registrationsApi = new RegistrationsApi(apiClient);
