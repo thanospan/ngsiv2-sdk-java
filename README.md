@@ -32,7 +32,7 @@ SubscriptionsApi | createSubscription | **POST** /subscriptions
 SubscriptionsApi | deleteSubscription | **DELETE** /subscriptions/{subscriptionId}
 SubscriptionsApi | listSubscriptions | **GET** /subscriptions
 SubscriptionsApi | retrieveSubscription | **GET** /subscriptions/{subscriptionId}
-SubscriptionsApi | updateSubscription) | **PATCH** /subscriptions/{subscriptionId}
+SubscriptionsApi | updateSubscription | **PATCH** /subscriptions/{subscriptionId}
 TypesApi | listEntityTypes | **GET** /types
 TypesApi | retrieveEntityType | **GET** /types/{entityType}
 
