@@ -1,7 +1,7 @@
 package com.thanospan.ngsi.v2.client.examples;
 
 import com.thanospan.ngsi.v2.client.ApiClient;
-import com.thanospan.ngsi.v2.client.api.Types;
+import com.thanospan.ngsi.v2.client.api.TypesApi;
 
 import java.net.http.HttpResponse;
 import java.util.HashMap;
@@ -9,24 +9,24 @@ import java.util.HashMap;
 public class TypesExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
-        Types types = new Types(apiClient);
+        TypesApi typesApi = new TypesApi(apiClient);
 
-        listEntityTypes(types);
-//        retrieveEntityTypes(types);
+        listEntityTypes(typesApi);
+//        retrieveEntityTypes(typesApi);
     }
 
-    private static void listEntityTypes(Types types) {
+    private static void listEntityTypes(TypesApi typesApi) {
         HashMap<String, String> parameters = new HashMap<>();
 //        parameters.put("limit", "10");
 //        parameters.put("offset", "20");
 //        parameters.put("options", "count");
-        HttpResponse<String> httpResponse = types.listEntityTypes(parameters).join();
+        HttpResponse<String> httpResponse = typesApi.listEntityTypes(parameters).join();
         printHttpResponse(httpResponse);
     }
 
-    private static void retrieveEntityTypes(Types types) {
+    private static void retrieveEntityTypes(TypesApi typesApi) {
         String entityType = "Room";
-        HttpResponse<String> httpResponse = types.retrieveEntityType(entityType).join();
+        HttpResponse<String> httpResponse = typesApi.retrieveEntityType(entityType).join();
         printHttpResponse(httpResponse);
     }
 

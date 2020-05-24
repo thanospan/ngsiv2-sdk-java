@@ -1,20 +1,20 @@
 package com.thanospan.ngsi.v2.client.examples;
 
 import com.thanospan.ngsi.v2.client.ApiClient;
-import com.thanospan.ngsi.v2.client.api.ApiEntryPoint;
+import com.thanospan.ngsi.v2.client.api.ApiEntryPointApi;
 
 import java.net.http.HttpResponse;
 
 public class ApiEntryPointExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
-        ApiEntryPoint apiEntryPoint = new ApiEntryPoint(apiClient);
+        ApiEntryPointApi apiEntryPointApi = new ApiEntryPointApi(apiClient);
 
-        retrieveApiResources(apiEntryPoint);
+        retrieveApiResources(apiEntryPointApi);
     }
 
-    private static void retrieveApiResources(ApiEntryPoint apiEntryPoint) {
-        HttpResponse<String> httpResponse = apiEntryPoint.retrieveApiResources().join();
+    private static void retrieveApiResources(ApiEntryPointApi apiEntryPointApi) {
+        HttpResponse<String> httpResponse = apiEntryPointApi.retrieveApiResources().join();
         printHttpResponse(httpResponse);
     }
 

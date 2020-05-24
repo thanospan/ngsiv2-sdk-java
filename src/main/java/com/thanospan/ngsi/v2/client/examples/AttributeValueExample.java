@@ -1,7 +1,7 @@
 package com.thanospan.ngsi.v2.client.examples;
 
 import com.thanospan.ngsi.v2.client.ApiClient;
-import com.thanospan.ngsi.v2.client.api.AttributeValue;
+import com.thanospan.ngsi.v2.client.api.AttributeValueApi;
 
 import java.net.http.HttpResponse;
 import java.util.HashMap;
@@ -9,22 +9,22 @@ import java.util.HashMap;
 public class AttributeValueExample {
     public static void main(String[] args) {
         ApiClient apiClient = new ApiClient();
-        AttributeValue attributeValue = new AttributeValue(apiClient);
+        AttributeValueApi attributeValueApi = new AttributeValueApi(apiClient);
 
-        getAttributeValue(attributeValue);
-//        updateAttributeValue(attributeValue);
+        getAttributeValue(attributeValueApi);
+//        updateAttributeValue(attributeValueApi);
     }
 
-    private static void getAttributeValue(AttributeValue attributeValue) {
+    private static void getAttributeValue(AttributeValueApi attributeValueApi) {
         HashMap<String, String> parameters = new HashMap<>();
 //        parameters.put("type", "Room");
         String entityId = "Bcn-Welt";
         String attrName = "location";
-        HttpResponse<String> httpResponse = attributeValue.getAttributeValue(entityId, attrName, parameters).join();
+        HttpResponse<String> httpResponse = attributeValueApi.getAttributeValue(entityId, attrName, parameters).join();
         printHttpResponse(httpResponse);
     }
 
-    private static void updateAttributeValue(AttributeValue attributeValue) {
+    private static void updateAttributeValue(AttributeValueApi attributeValueApi) {
         HashMap<String, String> parameters = new HashMap<>();
 //        parameters.put("type", "Room");
         String entityId = "Bcn-Welt";
@@ -39,7 +39,7 @@ public class AttributeValueExample {
 //        String contentType = "application/json";
 //        String body = "{\"address\":\"Ronda de la Comunicacion s/n\",\"zipCode\":28050,\"city\":\"Madrid\",\"country\":\"Spain\"}";
 
-        HttpResponse<String> httpResponse = attributeValue.updateAttributeValue(entityId, attrName, contentType, body, parameters).join();
+        HttpResponse<String> httpResponse = attributeValueApi.updateAttributeValue(entityId, attrName, contentType, body, parameters).join();
         printHttpResponse(httpResponse);
     }
 

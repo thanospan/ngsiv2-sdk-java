@@ -6,35 +6,35 @@ All URIs are relative to *http://localhost:1026/v2*
 
 Class | Method | HTTP request
 ------------ | ------------- | -------------
-ApiEntryPoint | retrieveApiResources | **GET** /
-AttributeValue | getAttributeValue | **GET** /entities/{entityId}/attrs/{attrName}/value
-AttributeValue | updateAttributeValue | **PUT** /entities/{entityId}/attrs/{attrName}/value
-Attributes | getAttributeData | **GET** /entities/{entityId}/attrs/{attrName}
-Attributes | removeASingleAttribute | **DELETE** /entities/{entityId}/attrs/{attrName}
-Attributes | updateAttributeData | **PUT** /entities/{entityId}/attrs/{attrName}
-BatchOperations | notify | **POST** /op/notify
-BatchOperations | query | **POST** /op/query
-BatchOperations | update | **POST** /op/update
-Entities | createEntity | **POST** /entities
-Entities | listEntities | **GET** /entities
-Entities | removeEntity | **DELETE** /entities/{entityId}
-Entities | replaceAllEntityAttributes | **PUT** /entities/{entityId}/attrs
-Entities | retrieveEntity | **GET** /entities/{entityId}
-Entities | retrieveEntityAttributes | **GET** /entities/{entityId}/attrs
-Entities | updateExistingEntityAttributes | **PATCH** /entities/{entityId}/attrs
-Entities | updateOrAppendEntityAttributes | **POST** /entities/{entityId}/attrs
-Registrations | createRegistration | **POST** /registrations
-Registrations | deleteRegistration | **DELETE** /registrations/{registrationId}
-Registrations | listRegistrations | **GET** /registrations
-Registrations | retrieveRegistration | **GET** /registrations/{registrationId}
-Registrations | updateRegistration | **PATCH** /registrations/{registrationId}
-Subscriptions | createSubscription | **POST** /subscriptions
-Subscriptions | deleteSubscription | **DELETE** /subscriptions/{subscriptionId}
-Subscriptions | listSubscriptions | **GET** /subscriptions
-Subscriptions | retrieveSubscription | **GET** /subscriptions/{subscriptionId}
-Subscriptions | updateSubscription) | **PATCH** /subscriptions/{subscriptionId}
-Types | listEntityTypes | **GET** /types
-Types | retrieveEntityType | **GET** /types/{entityType}
+ApiEntryPointApi | retrieveApiResources | **GET** /
+AttributeValueApi | getAttributeValue | **GET** /entities/{entityId}/attrs/{attrName}/value
+AttributeValueApi | updateAttributeValue | **PUT** /entities/{entityId}/attrs/{attrName}/value
+AttributesApi | getAttributeData | **GET** /entities/{entityId}/attrs/{attrName}
+AttributesApi | removeASingleAttribute | **DELETE** /entities/{entityId}/attrs/{attrName}
+AttributesApi | updateAttributeData | **PUT** /entities/{entityId}/attrs/{attrName}
+BatchOperationsApi | notify | **POST** /op/notify
+BatchOperationsApi | query | **POST** /op/query
+BatchOperationsApi | update | **POST** /op/update
+EntitiesApi | createEntity | **POST** /entities
+EntitiesApi | listEntities | **GET** /entities
+EntitiesApi | removeEntity | **DELETE** /entities/{entityId}
+EntitiesApi | replaceAllEntityAttributes | **PUT** /entities/{entityId}/attrs
+EntitiesApi | retrieveEntity | **GET** /entities/{entityId}
+EntitiesApi | retrieveEntityAttributes | **GET** /entities/{entityId}/attrs
+EntitiesApi | updateExistingEntityAttributes | **PATCH** /entities/{entityId}/attrs
+EntitiesApi | updateOrAppendEntityAttributes | **POST** /entities/{entityId}/attrs
+RegistrationsApi | createRegistration | **POST** /registrations
+RegistrationsApi | deleteRegistration | **DELETE** /registrations/{registrationId}
+RegistrationsApi | listRegistrations | **GET** /registrations
+RegistrationsApi | retrieveRegistration | **GET** /registrations/{registrationId}
+RegistrationsApi | updateRegistration | **PATCH** /registrations/{registrationId}
+SubscriptionsApi | createSubscription | **POST** /subscriptions
+SubscriptionsApi | deleteSubscription | **DELETE** /subscriptions/{subscriptionId}
+SubscriptionsApi | listSubscriptions | **GET** /subscriptions
+SubscriptionsApi | retrieveSubscription | **GET** /subscriptions/{subscriptionId}
+SubscriptionsApi | updateSubscription) | **PATCH** /subscriptions/{subscriptionId}
+TypesApi | listEntityTypes | **GET** /types
+TypesApi | retrieveEntityType | **GET** /types/{entityType}
 
 ## Known Issues
 * **PATCH** /registrations/{registrationId} returns **405 Method Not Allowed**.<br/>

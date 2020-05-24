@@ -9,40 +9,38 @@ import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
-public class BatchOperations {
+public class AttributesApi {
     private final ApiClient apiClient;
     private final HttpClient httpClient;
 
-    public BatchOperations(ApiClient apiClient) {
+    public AttributesApi(ApiClient apiClient) {
         this.apiClient = apiClient;
         this.httpClient = apiClient.getHttpClient();
     }
 
-    public CompletableFuture<HttpResponse<String>> update(String contentType, String body, HashMap<String, String> parameters) {
+    public CompletableFuture<HttpResponse<String>> getAttributeData(String entityId, String attrName, HashMap<String, String> parameters) {
         HttpRequest httpRequest = HttpRequest.newBuilder()
-                .uri(URI.create(apiClient.buildUri("/op/update", parameters)))
-                .header("Content-Type", contentType)
-                .POST(HttpRequest.BodyPublishers.ofString(body))
+                .uri(URI.create(apiClient.buildUri("/entities/" + entityId + "/attrs/" + attrName, parameters)))
+                .GET()
                 .build();
 
         return httpClient.sendAsync(httpRequest, HttpResponse.BodyHandlers.ofString());
     }
 
-    public CompletableFuture<HttpResponse<String>> query(String contentType, String body, HashMap<String, String> parameters) {
+    public CompletableFuture<HttpResponse<String>> updateAttributeData(String entityId, String attrName, String contentType, String body, HashMap<String, String> parameters) {
         HttpRequest httpRequest = HttpRequest.newBuilder()
-                .uri(URI.create(apiClient.buildUri("/op/query", parameters)))
+                .uri(URI.create(apiClient.buildUri("/entities/" + entityId + "/attrs/" + attrName, parameters)))
                 .header("Content-Type", contentType)
-                .POST(HttpRequest.BodyPublishers.ofString(body))
+                .PUT(HttpRequest.BodyPublishers.ofString(body))
                 .build();
 
         return httpClient.sendAsync(httpRequest, HttpResponse.BodyHandlers.ofString());
     }
 
-    public CompletableFuture<HttpResponse<String>> notify(String contentType, String body, HashMap<String, String> parameters) {
+    public CompletableFuture<HttpResponse<String>> removeASingleAttribute(String entityId, String attrName, HashMap<String, String> parameters) {
         HttpRequest httpRequest = HttpRequest.newBuilder()
-                .uri(URI.create(apiClient.buildUri("/op/notify", parameters)))
-                .header("Content-Type", contentType)
-                .POST(HttpRequest.BodyPublishers.ofString(body))
+                .uri(URI.create(apiClient.buildUri("/entities/" + entityId + "/attrs/" + attrName, parameters)))
+                .DELETE()
                 .build();
 
         return httpClient.sendAsync(httpRequest, HttpResponse.BodyHandlers.ofString());

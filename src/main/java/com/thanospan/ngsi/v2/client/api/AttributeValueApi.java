@@ -9,11 +9,11 @@ import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
-public class AttributeValue {
+public class AttributeValueApi {
     private final ApiClient apiClient;
     private final HttpClient httpClient;
 
-    public AttributeValue(ApiClient apiClient) {
+    public AttributeValueApi(ApiClient apiClient) {
         this.apiClient = apiClient;
         this.httpClient = apiClient.getHttpClient();
     }

@@ -9,11 +9,11 @@ import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
-public class Types {
+public class TypesApi {
     private final ApiClient apiClient;
     private final HttpClient httpClient;
 
-    public Types(ApiClient apiClient) {
+    public TypesApi(ApiClient apiClient) {
         this.apiClient = apiClient;
         this.httpClient = apiClient.getHttpClient();
     }

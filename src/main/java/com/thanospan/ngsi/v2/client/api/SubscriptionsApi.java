@@ -9,11 +9,11 @@ import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
-public class Subscriptions {
+public class SubscriptionsApi {
     private final ApiClient apiClient;
     private final HttpClient httpClient;
 
-    public Subscriptions(ApiClient apiClient) {
+    public SubscriptionsApi(ApiClient apiClient) {
         this.apiClient = apiClient;
         this.httpClient = apiClient.getHttpClient();
     }
